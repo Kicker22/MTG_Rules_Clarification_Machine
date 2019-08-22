@@ -19,6 +19,9 @@ $(".btn").on("click", function(event) {
     var clarify = stuff.rulings;
     var name = stuff.name;
     var img = stuff.imageUrl;
+    // var imageDiv = $("<div>")
+    // imageDiv.append('<img id="theImg" src="'+ img +'" />')
+    $(".resultImg").append(imageDiv)
     for (i = 0; i < clarify.length; i++) {
       var container = $("<div>");
       container.addClass("rulesContainer bg-light mt-5");
