@@ -18,14 +18,19 @@ $(".btn").on("click", function(event) {
     var stuff = response.cards[0];
     var clarify = stuff.rulings;
     var name = stuff.name;
+    var img = stuff.imageUrl;
     for (i = 0; i < clarify.length; i++) {
       var container = $("<div>");
       container.addClass("rulesContainer bg-light mt-5");
+      var imageDiv = $("<div>")
       var div = $("<div>");
       var nameDiv = $("<div>");
+
+      container.append(imageDiv);
       container.append(nameDiv);
       container.append(div);
-
+    
+      imageDiv.append('<img id="theImg" src="'+ img +'" />')
       nameDiv.addClass(" mb-1 name");
       nameDiv.text(name);
 
